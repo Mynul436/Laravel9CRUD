@@ -20,3 +20,7 @@ Route::get('/', function () {
 
 Route::get('studentlist', [StudentController::class, 'index']);
 Route::get('addstudent', [StudentController::class, 'addStudent']);
+Route::post('savestudent', [StudentController::class, 'saveStudent']);
+Route::get('editstudent/{id}', [StudentController::class, 'editStudent']);
+Route::post('updatestudent', [StudentController::class, 'updateStudent']);
+Route::get('deletestudent/{id}', [StudentController::class, 'deleteStudent']);

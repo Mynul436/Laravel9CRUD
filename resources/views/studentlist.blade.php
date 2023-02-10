@@ -13,7 +13,11 @@
         <div class="row">
             <div class="col-md-12">
                 <h2>Student List</h2>
-                <div style="margin-left: 10px ;float: right;"><a href="{{url('addstudent')}}"> Add </a></div>
+                <div style="margin-left: 10px ;float: right;">
+                    
+                    
+                    <a href="{{url('addstudent')}}" 
+                    class="btn btn-primary"> Add Student</a></div>
 
             <table class="table">
                 <thead>
@@ -29,10 +33,11 @@
 
                 </thead>
                 <tbody>
-                    @foreach($data as $key)
-                    @php
+                     @php
                         $i=1;
                     @endphp
+                    @foreach($data as $key)
+                   
                         <tr>
                             <td>{{$i++}}</td>
 
@@ -40,7 +45,10 @@
                             <td>{{$key->Email}}</td>
                             <td>{{$key->Phone}}</td>
                             <td>{{$key->Address}}</td>
-<td>Edit | Delete</td>
+<td>                    <a href="{{url('editstudent/'.$key->StudentId)}}"
+     class="btn btn-primary">Edit</a></div>
+     <a href="{{url('deletestudent/'.$key->StudentId)}}"
+        class="btn btn-danger">Delete</a></td>
                         </tr>
                     @endforeach
                 </tbody>
