@@ -75,7 +75,7 @@
                     <br>
                     <br>
 
-                    <button type="submit" class="btn btn-primary">Save</button>
+                    <button type="submit" class="btn btn-primary">Save student</button>
                         <a href="{{url('studentlist')}}" class="btn btn-danger">Back</a>
                 </form>
             </div>
